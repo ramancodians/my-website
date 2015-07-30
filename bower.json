@@ -1,0 +1,30 @@
+{
+  "name": "My Portfolio",
+  "version": "0.5.1",
+  "authors": [
+    "Raman Choudhary <raman.choudhary65@gmail.com>"
+  ],
+  "description": "My personal website for 2015, With following features Blog, Work Portfolio and contact us",
+  "main": "index.html",
+  "keywords": [
+    "raman",
+    "codians",
+    "raman",
+    "choudhary",
+    "portfolio"
+  ],
+  "license": "no",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "angular-animate": "~1.4.3"
+  }
+}
