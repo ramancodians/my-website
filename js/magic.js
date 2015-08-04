@@ -31,7 +31,7 @@ app.config(['$routeProvider',
   }]);
 
 
-app.controller('MainCtrl',function($scope){
+app.controller('MainCtrl',function($scope, $window){
     $scope.test = 'Supper';
 });
 

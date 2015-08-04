@@ -1,57 +1,93 @@
 @import url(http://fonts.googleapis.com/css?family=Satisfy|Roboto+Slab:700,400|Roboto:400,700);
-
-
-
-$pixel-font : 'Satisfy', cursive;
-$rb-font :'Roboto Slab', serif;
-$roboto-font: 'Roboto', sans-serif;
-
-
-body{
-    background: #7cc0e3;
-}
-
-
-.btn-next{
-   border-radius: 0px;
-   padding: 20px;
-    margin: 40px 0px;
-}
-
-.main{
-    padding-top: 150px;
+$pixel-font: 'Satisfy',
+cursive;
+$rb-font:'Roboto Slab',
+serif;
+$roboto-font: 'Roboto',
+sans-serif;
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
     font-family: $rb-font;
-    
-    
-    h1{
-        font-size: 100px;
-        font-weight: bold;
-        transform: translateY(-30px);
-        
-        span#code{
-            font-family: $rb-font;
-        }
-        
-        span#pixel{
-            font-family: $pixel-font;
-        }
-       
-    }
-    
 }
 
-.work{
-    .showcase{
-         background: #247681;   
-        color: #fff;
-        text-align: center;
-        padding-top: 50px; 
-        border: 1px solid red;
-        & > div{
-           
-            min-height: 200px;
+.menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    color: #FFF;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .home-card {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 50px;
+        .msg {
+            h1 {
+                font-size: 100px;
+                font-weight: bold;
+                transform: translateY(-20px);
+                span.pixels {
+                    font-family: $pixel-font;
+                }
+                
+                .and{
+                    transform: scale(2);
+                    
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0px auto;
+    display: block;
+    max-width: 900px;
+}
+
+.btn-next {
+    padding: 20px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.showcase{
+    color: #111;
+    text-align: right;
+    
+    & > div{
+        min-height: 400px;
+        position: relative;
+        background: #eee;
+        transform-origin: right;
+        
+        &:nth-child(2){
+            border-left: 1px solid #ccc;
+             
         }
         
+        h1{
+            margin-top: 100px;
+            position: relative;
+            display: block;
+          
+        }
     }
-    
 }
+

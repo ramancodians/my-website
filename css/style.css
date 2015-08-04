@@ -1,29 +1,64 @@
 @import url(http://fonts.googleapis.com/css?family=Satisfy|Roboto+Slab:700,400|Roboto:400,700);
 body {
-  background: #7cc0e3; }
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-family: "Roboto Slab", serif; }
+
+.menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  background: #222;
+  color: #FFF;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px; }
+
+section {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+  section .home-card {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px; }
+    section .home-card .msg h1 {
+      font-size: 100px;
+      font-weight: bold;
+      transform: translateY(-20px); }
+      section .home-card .msg h1 span.pixels {
+        font-family: "Satisfy", cursive; }
+      section .home-card .msg h1 .and {
+        transform: scale(2); }
+
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+  display: block;
+  max-width: 900px; }
 
 .btn-next {
-  border-radius: 0px;
   padding: 20px;
-  margin: 40px 0px; }
+  border-radius: 0px;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
 
-.main {
-  padding-top: 150px;
-  font-family: "Roboto Slab", serif; }
-  .main h1 {
-    font-size: 100px;
-    font-weight: bold;
-    transform: translateY(-30px); }
-    .main h1 span#code {
-      font-family: "Roboto Slab", serif; }
-    .main h1 span#pixel {
-      font-family: "Satisfy", cursive; }
-
-.work .showcase {
-  background: #247681;
-  color: #fff;
-  text-align: center;
-  padding-top: 50px;
-  border: 1px solid red; }
-  .work .showcase > div {
-    min-height: 200px; }
+.showcase {
+  color: #111;
+  text-align: right; }
+  .showcase > div {
+    min-height: 400px;
+    position: relative;
+    background: #eee;
+    transform-origin: right; }
+    .showcase > div:nth-child(2) {
+      border-left: 1px solid #ccc; }
+    .showcase > div h1 {
+      margin-top: 100px;
+      position: relative;
+      display: block; }

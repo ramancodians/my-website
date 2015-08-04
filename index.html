@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Raman Choudahary | I Work in Pixles & Code</title>
+    <title>Raman Choudhary | I Work in Pixles & Code</title>
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -16,6 +16,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
       
+<!--      Jquery-->
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      
     <!-- Angular -->
     <script src="bower_components/angular/angular.min.js"></script>
       <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -24,30 +27,34 @@
       
   </head>
   <body  ng-app="batman">
-      <header>
-     <div class="container">
-            <div class="row">
-            <div class="colp-md-12">
-                    <div class="text-right">
-                   
-                            <a href="/blog">Blog</a> / 
-                            <a href="#/work">Work</a> / 
-                            <a href="#/about">About</a> / 
-                            <a href="#/contact">Contact</a> / 
-                      
-                </div>
-                </div>
-         </div>
-          </div>
-      </header>
       
-      <div ng-view></div>
+      <div class="menu">
+        X
+      </div>
+      
+      <section class="view" ng-view>
+        <div class="home-card">
+            <div class="wrapper">
+                <div class="msg">
+                    <h3>Hello, I'm Raman Choudhary</h3>
+                    <h4>I Work in</h4>
+                    <h1><span>Pixels</span> & {Code}</h1>
+                    
+                    <button class="btn btn-next">
+                        Show Me What you got?
+                    </button>
+                </div>
+            </div>
+          </div>
+          
+      </section>
       
       
       
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>    
+      
   </body>
 </html>
