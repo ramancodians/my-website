@@ -1,93 +1,289 @@
-@import url(http://fonts.googleapis.com/css?family=Satisfy|Roboto+Slab:700,400|Roboto:400,700);
-$pixel-font: 'Satisfy',
-cursive;
-$rb-font:'Roboto Slab',
-serif;
-$roboto-font: 'Roboto',
-sans-serif;
-body {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    font-family: $rb-font;
+$font-header: 'Dosis', sans-serif;
+$font-designer: 'Playfair Display', serif;
+$font-coder : 'Bree Serif', serif;
+
+$base-color : #ffffff;
+//$base-color : #2980b9;
+
+@mixin test() {
+    border: 1px solid red;
+    //  background: rgba(0,200,93,0.2);
+    // padding: 10px;
 }
 
-.menu {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 50px;
-    height: 50px;
-    background: #222;
-    color: #FFF;
-    font-size: 25px;
-    text-align: center;
-    padding: 10px;
+@mixin reset() {
+    padding: 0px;
+    margin: 0px;
+    background: none;
+    border: 0px;
 }
 
-section {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    .home-card {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 50px;
-        .msg {
-            h1 {
-                font-size: 100px;
-                font-weight: bold;
-                transform: translateY(-20px);
-                span.pixels {
-                    font-family: $pixel-font;
-                }
+body{
+    background: #dddddd;
+}
+
+@import 'mediaQueries';
+.view {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.type{
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    #d{
+        display: inline-block;
+        padding: 5px 10px;
+        background: rgba(#228826,1);
+        border-radius: 4px;
+    }
+    #c{
+        display: inline-block;
+        padding: 5px 10px;
+        background: rgba(#2254a5,1);
+        border-radius: 4px;
+    }
+}
+
+.work {
+    //showcase
+    .showcase {
+        .col-sm-6 {
+            margin: 0px !important;
+            padding: 0px !important;
+            border-right: 1px solid #FFF;
+        }
+        .project {
+            min-height: 300px;
+            background: lightblue;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            transition-duration: 1s;
+            
+            &:hover > .bg{
+                transform: scale(1.1);
+                transition-duration: 1s;
+                 
+            }
+            
+            .bg{
+                height: auto;
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                  transition-duration: 1s;
+              
+            }
+            
+            .details{
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                background: rgba(#FFF,0.8);
+                width: 100%;
+                color: #FFF;
+                padding: 20px;
                 
-                .and{
-                    transform: scale(2);
-                    
+                h1{
+                    margin: 0px;
+                    padding: 0px;
+                    padding-bottom: 10px;
+                    color: #1c1c1c;
+                }
+            }
+        }
+        .left {
+            .project {
+                &:nth-child(1) {
+                    @include tablet {
+                        width: 100%;
+                    }
+                    width: 80%;
+                }
+                &:nth-child(2) {
+                    width: 90%;
+                    background: yellow;
+                    @include tablet {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(3) {
+                    width: 80%;
+                    background: green;
+                    @include tablet {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .right {
+            .project {
+                &:nth-child(1) {
+                    width: 90%;
+                    margin-top: 40px;
+                    @include tablet {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 95%;
+                    background: yellow;
+                    @include tablet {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(3) {
+                    width: 80%;
+                    background: green;
+                    @include tablet {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 }
 
-.wrapper {
-    width: 100%;
-    margin: 0px auto;
-    display: block;
-    max-width: 900px;
-}
-
-.btn-next {
-    padding: 20px;
-    border-radius: 0px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
-
-.showcase{
-    color: #111;
-    text-align: right;
+.project{
+    header{
+        min-height: 500px;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        
+        .bg{
+            width: 100%;
+        }
+        
+    }
     
-    & > div{
-        min-height: 400px;
-        position: relative;
-        background: #eee;
-        transform-origin: right;
-        
-        &:nth-child(2){
-            border-left: 1px solid #ccc;
-             
-        }
-        
-        h1{
-            margin-top: 100px;
-            position: relative;
-            display: block;
-          
-        }
+    .container{
+        margin-top: 550px;
     }
 }
 
+// home styels
+
+
+.wrapper{
+    
+    @include tablet{
+        padding: 20px;
+    }
+    
+    @include laptop{
+        margin-top: 50px;
+    }
+    
+     @include desktop{
+        margin-top: 50px;
+    }
+    
+    & > .row {
+        max-width: 700px;
+        margin: 0px auto;
+        color: #363636;
+        
+        @include tablet{
+            background: rgba(red,0.2);
+            //padding: 20px;
+        }
+       
+    }    
+    // with .row
+    .hello{
+        
+        div{
+            min-height: 200px;            
+        }        
+        & > div:nth-child(2){
+            background: $base-color;
+             transform: translate(0px,22px);
+            
+           
+            
+            & > div{
+                padding: 20px;
+                
+                h3{
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 20px;
+                    font-family: $font-header;
+                    font-size: 40px;
+                }
+            }
+        }
+          & > div:nth-child(3){
+        }
+        
+        .meri-photo{          
+            transform: translate(-15px,120px);            
+            @include tablet{
+                transform:translate(-15px,22px);
+            }
+           
+        }
+    }
+    
+    .me{
+        & div:nth-child(1){
+            padding: 10px;
+            text-align: right;
+            background: $base-color - 20;
+            
+            h1,h5{
+                 font-family: $font-header;
+            }
+        }
+    }
+    
+    .do{
+        
+        & > div{
+            min-height: 175px;
+        }
+            & > div:nth-child(2){
+                background: $base-color - 40;
+                padding: 10px;
+            }
+            & > div:nth-child(3){
+                background: $base-color + 10;
+                padding: 20px;
+                h1,h3{
+                     font-family: $font-header;
+                }
+                
+                #typed{
+                    font-family: $font-coder;
+                }
+            }
+           
+        }
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
